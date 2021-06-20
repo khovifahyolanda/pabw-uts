@@ -1,0 +1,242 @@
+/* Navbar */
+.navbar {
+    position: relative;
+    z-index: 1;
+}
+.nav-link {
+    font-family: 'Roboto', sans-serif;
+}
+.navbar-brand {
+    font-family: viga;
+    font-size: 32px;
+}
+.navbar-brand img {
+    height: 40px;
+    width: 40px;
+}
+
+/* Jumbotron */
+.jumbotron {
+    background-image: url(../admin/images/img_jumbotron.jpg);
+    background-size: cover;
+    text-align: center;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    height: 540px;
+    font-family: viga;
+    position: relative;
+}
+.jumbotron .contaioner {
+    z-index: 1;
+    position: relative;
+}
+.jumbotron::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 42%;
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+    position: absolute;
+    bottom: 0;
+}
+.jumbotron .display-4 {
+    color: white;
+    margin-top: 190px;
+    font-weight: 400;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+.jumbotron .display-4 span {
+    font-weight: 700;
+}
+
+/* Info Panel */
+.info-panel {
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    margin-top: -100px;
+    background-color: white;
+    padding: 30px;
+    z-index: 1;
+    position: relative;
+}
+.panel-hover {
+    padding: 10px;
+    transition: 0.7s;
+}
+.info-panel img {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.info-panel h4 {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #111;
+    margin-top: -5px;
+    font-weight: 500;
+}
+.info-panel p {
+    font-size: 14px;
+    color: #222;
+}
+
+/* Workingspace */
+.workingspace {
+    margin-top: 120px;
+    text-align: center;
+}
+.workingspace h3 {
+    font-size: 48px;
+    font-weight: 200;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+.workingspace h3 span {
+    font-weight: 500;
+}
+.workingspace p {
+    font-size: 18px;
+    color: #acacac;
+    font-weight: 200;
+    margin: 25px 0;
+}
+.carousel-item .carousel-caption p {
+    font-size: 18px;
+    color: #acacac;
+    font-weight: 500;
+    margin-bottom: -30px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+/* Testimonial */
+.testimonial {
+    margin-top: 150px;
+}
+.testimonial h5 {
+    text-align: center;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 18px;
+    color: #acacac;
+}
+.testimonial figure img {
+    width: 60px;
+    margin: 20px 15px 0px;
+    opacity: 0.7;
+}
+.testimonial figure img.primary {
+    margin-top: 5px;
+    width: 90px;
+    opacity: 1;
+}
+.testimonial figure h5 {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: normal;
+    color: #1c2c5d;
+}
+.testimonial figure p {
+    font-size: 12px;
+    color: #acacac;
+    margin-top: -5px;
+}
+.testimonial figcaption {
+    text-align: center;
+}
+/* footer */
+.py-5 {
+  background-color: #1F1F1F;
+}
+
+
+
+/* Utility */
+.button {
+    text-transform: uppercase;
+    border-radius: 18px;
+}
+
+/* anaimation */
+@keyframes anim_Indicator {
+    0% {
+        width: 10%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+
+
+
+
+/* Desktop Version */
+@media (min-width: 992px) {
+
+    /* Navbar */
+    .navbar {
+        height: 60px;
+    }
+    .navbar-brand,
+    .nav-link {
+        color: black !important;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+    }
+    .nav-link {
+        text-transform: uppercase;
+        margin-right: 30px;
+    }
+    .nav-link:hover::after {
+        content: "";
+        transition: 0.5s;
+        display: block;
+        border-bottom: 3px solid #470250;
+        width: 100%;
+        margin: auto;
+        padding-bottom: 5px;
+        margin-bottom: -8px;
+        animation: anim_Indicator 0.2s forwards 1;
+    }
+
+    /* Navbar-Dropdown */
+    .dropdown:hover>.dropdown-menu {
+        display: block;
+    }
+    .jumbotron {
+        height: 640px;
+    }
+    .jumbotron .display-4 {
+        font-size: 58px;
+    }
+
+    /* Info Panel */
+    .panel-hover:hover{
+        /* background: rgb(182, 182, 182); */
+        color: teal;
+        text-shadow: 1px 1px 1px rgba(150, 149, 149, 0.5);
+        transform: scale(1.1);
+    }
+    .panel-hover a{
+        text-decoration: none;
+    }
+    .info-panel img {
+        margin-bottom: 0;
+    }
+
+    /* Workingspace */
+    .workingspace {
+        margin-top: 120px;
+        text-align: left;
+    }
+
+    /* Testimonial */
+    .testimonial h5 {
+        text-align: center;
+        font-weight: 200;
+        font-style: italic;
+        font-size: 22px;
+    }
+}
